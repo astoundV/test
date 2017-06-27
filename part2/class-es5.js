@@ -21,11 +21,11 @@ AbstractCar.prototype = {
     }
 };
 
-function miniCar() {
-
+function miniCar(weight, height) {
+    AbstractCar.call(this, weight, height);
 }
 
 extend(miniCar, AbstractCar);
 
-var car = new miniCar();
+var car = new miniCar(100, 200);
 car.info();
